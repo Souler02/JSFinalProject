@@ -1,7 +1,7 @@
 document.getElementById('btnSearch').addEventListener('click', function() {
     const userInput = document.getElementById('destinationInput').value.toLowerCase().trim();
     
-    fetch('travel_recommendation_api.json')  // Asegúrate de que el nombre del archivo JSON es correcto
+    fetch('travel_recommendation_api.json')
         .then(response => response.json())
         .then(data => {
             console.log("Datos cargados:", data);
@@ -14,24 +14,21 @@ document.getElementById('btnSearch').addEventListener('click', function() {
             }
 
             const results = [];
-            
-            // Buscar en playas (beaches)
+
             if (userInput.includes('beach') || userInput.includes('playa')) {
                 results.push(...data.beaches);
             }
             
-            // Buscar en templos (temples)
+
             if (userInput.includes('temple') || userInput.includes('templo')) {
                 results.push(...data.temples);
             }
             
-            // Buscar en países y ciudades
+
             data.countries.forEach(country => {
-                // Buscar por nombre de país (ej: "japan")
                 if (country.name.toLowerCase().includes(userInput)) {
                     results.push(...country.cities);
                 } else {
-                    // Buscar por nombre de ciudad SOLO si no coincidió el país
                     country.cities.forEach(city => {
                         if (city.name.toLowerCase().includes(userInput)) {
                             results.push(city);
@@ -60,7 +57,7 @@ document.getElementById('btnClear').addEventListener('click', function() {
 
 function displayResults(results) {
     const resultsColumn = document.getElementById('resultsColumn');
-    resultsColumn.innerHTML = ''; // Limpiar resultados anteriores
+    resultsColumn.innerHTML = '';
     
     if (results.length === 0) return;
     

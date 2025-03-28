@@ -118,8 +118,8 @@ nav {
   
 .social-buttons {
     position: absolute;
-    left: 20px; /* Misma alineación que content-block */
-    top: 180px; /* Ajusta según necesites */
+    left: 20px;
+    top: 180px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -423,7 +423,6 @@ nav {
     position: relative;
 }
 
-/* Contenedor de resultados */
 .results-container {
     width: 100%;
     display: grid;
