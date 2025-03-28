@@ -15,22 +15,22 @@ document.getElementById('btnSearch').addEventListener('click', function() {
 
             const results = [];
 
-            if (userInput.includes('beach') || userInput.includes('playa')) {
+            if (userInput.includes('beach')) {
                 results.push(...data.beaches);
             }
             
 
-            if (userInput.includes('temple') || userInput.includes('templo')) {
+            if (userInput.includes('temple')) {
                 results.push(...data.temples);
             }
             
 
             data.countries.forEach(country => {
-                if (country.name.toLowerCase().includes(userInput)) {
+                if (country.name.toLowerCase().startsWith(userInput)) {
                     results.push(...country.cities);
                 } else {
                     country.cities.forEach(city => {
-                        if (city.name.toLowerCase().includes(userInput)) {
+                        if (city.name.toLowerCase().startsWith(userInput)) {
                             results.push(city);
                         }
                     });
