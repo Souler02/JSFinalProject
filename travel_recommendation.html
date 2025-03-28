@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="travel.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-brand">
+      <h1>TravelGenie</h1>
+    </div>
+    
+    <div class="nav-links">
+      <ul>
+          <li><a href="travel_recommendation.html" id="home">Home</a></li>
+          <li><a href="about.html" id="about">About</a></li>
+          <li><a href="contact.html" id="contact">Contact Us</a></li>
+      </ul>
+    </div>
+    
+    <div class="nav-search">
+      <ul>
+          <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword"></li>
+          <li><button id="btnSearch">Search</button></li>
+          <li><button id="btnClear">Clear</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="main-container">
+    <div class="social-buttons">
+        <a href="#" class="social-btn"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="#" class="social-btn"><img src="twitter-icon.png" alt="Twitter"></a>
+        <a href="#" class="social-btn"><img src="instagram-icon.png" alt="Instagram"></a>
+        <a href="#" class="social-btn"><img src="youtube-icon.png" alt="YouTube"></a>
+    </div>
+    <div class="content-column">
+        <h1 class="main-title">Your Ultimate Travel Recommendation Guide</h1>
+        <p class="main-description">Discover your next dream destination with TravelGenie! Our website offers personalized travel recommendations based on your preferences—whether you're looking for adventure, 
+            relaxation, culture, or hidden gems. Get curated guides, insider tips, and handpicked itineraries to make your trips unforgettable. 
+            Start exploring today and let TravelGenie inspire your next journey! ✈️🌍</p>
+        <button class="book-now-btn">Book Now</button>
+    </div>
+    <div class="results-column" id="resultsColumn"></div>
+  </div>
+  <script src="travel_recommendation.js"></script>
+</body>
+</html>
